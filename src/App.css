@@ -1,7 +1,6 @@
-
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .App {
@@ -88,14 +87,14 @@
 
 .UniversalHeader-listlink {
   text-decoration: none;
-  color: #234E52;
+  color: #234e52;
 }
 
 .Header-info {
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 8px;
+  bottom: 9px;
 }
 
 .Header-tabs {
@@ -109,6 +108,11 @@
   font-weight: 500;
   text-transform: uppercase;
   padding: 15px 10px;
+}
+
+.Header-tab--active {
+  color: #ffffff;
+  border-bottom: 3px solid #6acab8;
 }
 
 .App-body {
@@ -140,9 +144,24 @@
 }
 
 .Sidebar-link {
-  text-decoration: none;
-  color: #234E52;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d4554;
+  border: none;
+  background: transparent;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
 
+.Sidebar-deleteitem {
+  display: none;
+  cursor: pointer;
+}
+
+.Sidebar-listitem:hover .Sidebar-deleteitem {
+  display: inline-block;
 }
 
 .App-content {
@@ -151,15 +170,15 @@
   background: #ffffff;
 }
 
-.Content-header {
+.Content-header0 {
   font-size: 40px;
 }
 
-.Content-subheader {
+.Content-header1 {
   font-size: 30px;
 }
 
-.Content-sub-subheader {
+.Content-header2 {
   font-size: 22px;
 }
 
