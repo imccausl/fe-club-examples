@@ -38,18 +38,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="Header">
           <UniversalHeader />
           <CourseHeader />
         </header>
-
-        <div className="App-body">
+        <div className="Body">
           <Sidebar
             openPage={this.openPage}
             deletePage={this.deletePage}
             pagesList={this.state.pagesList}
           />
-          <main className="App-content">
+          <main className="Page">
             {pages[this.state.activePage].map((content) => (
               <Page
                 content={content}

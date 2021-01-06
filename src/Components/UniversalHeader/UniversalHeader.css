@@ -1,0 +1,62 @@
+.Universalheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.UniversalHeader--navlinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.UniversalHeader--link {
+  color: #deebff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0px 5px;
+  margin: 0px 2.5px;
+}
+
+.UniversalHeader--link:first-of-type {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.UniversalHeader--collapsablelist {
+  position: relative;
+}
+
+.UniversalHeader--collapsablebutton {
+  height: 26px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #deebff;
+}
+
+.UniversalHeader--navlist {
+  padding: 0;
+  background: #f9f9f9;
+  list-style-type: none;
+  border: 1px solid #285e61;
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+}
+
+.UniversalHeader--listitem {
+  padding: 16px;
+  border-bottom: 1px solid #285e61;
+}
+
+.UniversalHeader--listitem:last-of-type {
+  border-bottom: none;
+}
+
+.UniversalHeader--listlink {
+  text-decoration: none;
+  color: #234e52;
+}

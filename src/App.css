@@ -9,7 +9,7 @@
   padding: 0;
 }
 
-.App-header {
+.Header {
   background: #1b344c;
   height: 82px;
   color: white;
@@ -17,172 +17,13 @@
   position: relative;
 }
 
-.Header-title {
-  font-size: 14px;
-  font-weight: 600;
-  max-width: 400px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 10px 0;
-}
-
-.Header-universalheader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.UniversalHeader-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.UniversalHeader-linkitem {
-  color: #deebff;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 0px 5px;
-  margin: 0px 2.5px;
-}
-
-.UniversalHeader-linkitem:first-of-type {
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.UniversalHeader-navlist {
-  position: relative;
-}
-
-.UniversalHeader-buttondropdown {
-  height: 26px;
-  background: transparent;
-  border: none;
-  border-radius: 4px;
-  color: #deebff;
-}
-
-.UniversalHeader-list {
-  padding: 0;
-  background: #f9f9f9;
-  list-style-type: none;
-  border: 1px solid #285e61;
-  border-radius: 2px;
-  position: absolute;
-  right: 0;
-}
-
-.UniversalHeader-listitem {
-  padding: 16px;
-  border-bottom: 1px solid #285e61;
-}
-
-.UniversalHeader-listitem:last-of-type {
-  border-bottom: none;
-}
-
-.UniversalHeader-listlink {
-  text-decoration: none;
-  color: #234e52;
-}
-
-.Header-info {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 9px;
-}
-
-.Header-tabs {
-  margin-left: 30px;
-}
-
-.Header-tab {
-  color: #deebff;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 15px 10px;
-}
-
-.Header-tab--active {
-  color: #ffffff;
-  border-bottom: 3px solid #6acab8;
-}
-
-.App-body {
+.Body {
   display: flex;
   min-height: calc(100vh - 100px);
 }
 
-.App-sidebar {
-  width: 440px;
-  border-right: 1px solid #d9dde1;
-  background: #f9f9f9;
-}
-
-.Sidebar-list {
-  padding: 0;
-  list-style-type: none;
-}
-
-.Sidebar-listitem {
-  height: 32px;
-  display: flex;
-  align-items: center;
-  border-bottom: none;
-  padding: 0 10px;
-}
-
-.Sidebar-listitem:hover {
-  background: #e8effb;
-}
-
-.Sidebar-link {
-  font-size: 14px;
-  font-weight: 600;
-  color: #2d4554;
-  border: none;
-  background: transparent;
-  text-transform: capitalize;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-
-.Sidebar-deleteitem {
-  display: none;
-  cursor: pointer;
-}
-
-.Sidebar-listitem:hover .Sidebar-deleteitem {
-  display: inline-block;
-}
-
-.App-content {
+.Page {
   padding: 24px;
   width: calc(100vw - 440px);
   background: #ffffff;
-}
-
-.Content-header0 {
-  font-size: 40px;
-}
-
-.Content-header1 {
-  font-size: 30px;
-}
-
-.Content-header2 {
-  font-size: 22px;
-}
-
-.Content-text {
-  font-size: 14px;
-  padding: 8px;
 }

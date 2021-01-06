@@ -1,8 +1,9 @@
 import { SidebarListItem } from "./SidebarListItem";
+import "./Sidebar.css";
 
 export const Sidebar = ({ openPage, deletePage, pagesList }) => (
-  <div className="App-sidebar">
-    <ul className="Sidebar-list">
+  <div className="Sidebar">
+    <ul className="Sidebar--list">
       {pagesList.map((pageTitle) => (
         <SidebarListItem
           title={pageTitle}

@@ -1,0 +1,43 @@
+.Sidebar {
+  width: 440px;
+  border-right: 1px solid #d9dde1;
+  background: #f9f9f9;
+}
+
+.Sidebar--list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.Sidebar--item {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  padding: 0 10px;
+}
+
+.Sidebar--item:hover {
+  background: #e8effb;
+}
+
+.Sidebar--button {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d4554;
+  border: none;
+  background: transparent;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.Sidebar--delete {
+  display: none;
+  cursor: pointer;
+}
+
+.Sidebar--item:hover .Sidebar--delete {
+  display: inline-block;
+}

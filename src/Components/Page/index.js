@@ -1,11 +1,12 @@
 import React from "react";
+import "./Page.css";
 
 export const Page = ({ content, level }) => (
   <React.Fragment>
-    <p className={`Content-header${level}`}>{content.heading}</p>
+    <p className={`page--heading--${level}`}>{content.heading}</p>
     {content.text &&
       content.text.map((text) => (
-        <p key={text.substring(10)} className="Content-text">
+        <p key={text.substring(10)} className="page--text">
           {text}
         </p>
       ))}

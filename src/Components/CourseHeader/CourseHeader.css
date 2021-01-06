@@ -1,0 +1,34 @@
+.CourseHeader {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 9px;
+}
+
+.CourseHeader--title {
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px 0;
+}
+
+.CourseHeader--tabs {
+  margin-left: 30px;
+}
+
+.CourseHeader--tab {
+  color: #deebff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 15px 10px;
+}
+
+.CourseHeader--tab--active {
+  color: #ffffff;
+  border-bottom: 3px solid #6acab8;
+}

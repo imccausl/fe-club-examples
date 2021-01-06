@@ -1,4 +1,5 @@
 import React from "react";
+import "./UniversalHeader.css";
 
 export class UniversalHeader extends React.Component {
   constructor(props) {
@@ -8,31 +9,31 @@ export class UniversalHeader extends React.Component {
   render() {
     const { isGlobalNavOpen } = this.state;
     return (
-      <div className="Header-universalheader">
-        <div className="UniversalHeader-links">
-          <a href="#courses" className="UniversalHeader-linkitem">
+      <div className="Universalheader">
+        <div className="UniversalHeader--navlinks">
+          <a href="#courses" className="UniversalHeader--link">
             Courses
           </a>
-          <a href="#marketplace" className="UniversalHeader-linkitem">
+          <a href="#marketplace" className="UniversalHeader--link">
             Marketplace
           </a>
         </div>
-        <div className="UniversalHeader-navlist">
+        <div className="UniversalHeader--collapsablelist">
           <button
-            className="UniversalHeader-buttondropdown"
+            className="UniversalHeader--collapsablebutton"
             onClick={() => this.setState({ isGlobalNavOpen: !isGlobalNavOpen })}
           >
             Jennifer Cahalane
           </button>
           {isGlobalNavOpen && (
-            <ul className="UniversalHeader-list">
-              <li className="UniversalHeader-listitem">
-                <a href="/settings" className="UniversalHeader-listlink">
+            <ul className="UniversalHeader--navlist">
+              <li className="UniversalHeader--listitem">
+                <a href="/settings" className="UniversalHeader--listlink">
                   Settings
                 </a>
               </li>
-              <li className="UniversalHeader-listitem">
-                <a href="/logout" className="UniversalHeader-listlink">
+              <li className="UniversalHeader--listitem">
+                <a href="/logout" className="UniversalHeader--listlink">
                   Log out
                 </a>
               </li>
