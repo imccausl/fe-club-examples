@@ -15,6 +15,7 @@
   height: 82px;
   color: white;
   padding: 2px 24px;
+  position: relative;
 }
 
 .Header-title {
@@ -90,15 +91,35 @@
   color: #234E52;
 }
 
+.Header-info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 8px;
+}
+
+.Header-tabs {
+  margin-left: 30px;
+}
+
+.Header-tab {
+  color: #deebff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 15px 10px;
+}
+
 .App-body {
   display: flex;
   min-height: calc(100vh - 100px);
 }
 
 .App-sidebar {
-  flex-basis: 25%;
-  border-right: 1px solid #285e61;
-  background: #f5fcfb;
+  width: 440px;
+  border-right: 1px solid #d9dde1;
+  background: #f9f9f9;
 }
 
 .Sidebar-list {
@@ -107,16 +128,15 @@
 }
 
 .Sidebar-listitem {
-  padding: 16px;
-  border-bottom: 1px solid #285e61;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  padding: 0 10px;
 }
 
 .Sidebar-listitem:hover {
-  background: #B2F5EA;
-}
-
-.Sidebar-listitem:focus {
-  background: #B2F5EA;
+  background: #e8effb;
 }
 
 .Sidebar-link {
@@ -127,7 +147,8 @@
 
 .App-content {
   padding: 24px;
-  flex-basis: 75%;
+  width: calc(100vw - 440px);
+  background: #ffffff;
 }
 
 .Content-header {

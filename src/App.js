@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-        <div className="Header-universalheader">
+          <div className="Header-universalheader">
             <div className="UniversalHeader-links">
               <a href="#courses" className="UniversalHeader-linkitem">Courses</a>
               <a href="#marketplace" className="UniversalHeader-linkitem">Marketplace</a>
@@ -33,11 +33,18 @@ class App extends React.Component {
               )}
             </div>
           </div>
-          <p className="Header-title">A11y Reading Group</p>
+          <div className="Header-info">
+            <p className="Header-title">A11y Reading Group</p>
+            <div className="Header-tabs">
+              <a href="#content" className="Header-tab">Content</a>
+              <a href="#gradebook" className="Header-tab">Gradebook</a>
+              <a href="#students" className="Header-tab">Students</a>
+            </div>
+          </div>
         </header>
 
         <div className="App-body">
-          <nav className="App-sidebar" aria-label="sidebar: page list">
+          <div className="App-sidebar" aria-label="sidebar: page list">
             <ul className="Sidebar-list">
               <li className="Sidebar-listitem">
                 <a href="/page/1" className="Sidebar-link">page 1</a>
@@ -52,17 +59,18 @@ class App extends React.Component {
                 <a href="/page/4" className="Sidebar-link">page 4</a>
               </li>
             </ul>
-          </nav>
+          </div>
 
           <main className="App-content">
-            <h2 className="Content-header">Landmarks & Headings</h2>
-            <h3 className="Content-subheader">Landmarks</h3>
-              <h4 className="Content-sub-subheader">Main</h4>
-              <p className="Content-text">Contains the primary content of page</p>
-              <h4 className="Content-sub-subheader">Complementary</h4>
-              <p className="Content-text">Contains secondary information that is related to the of primary content but is understandable on its own</p>
-            <h3 className="Content-subheader">Headings</h3>
-            <p className="Content-text">Sighted users typically rely on areas with larger or bolded text to call out different content areas on a page. The size and visual relationship between these areas helps us to gain and understanding of the hierarchy of information presented on the page. Screen reader users rely on html headings to define this hierarchy in a way that they can understand and navigate easily.</p>
+            <p className="Content-header">Nullam ac Tortor Vitae</p>
+            <p className="Content-subheader">Nulla Malesuada</p>
+              <p className="Content-sub-subheader">Arcu</p>
+              <p className="Content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper. Turpis massa sed elementum tempus egestas sed sed. Nunc mattis enim ut tellus elementum sagittis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Amet volutpat consequat mauris nunc congue nisi. Integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Interdum posuere lorem ipsum dolor. Nisi vitae suscipit tellus mauris a diam. Vestibulum rhoncus est pellentesque elit. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Faucibus nisl tincidunt eget nullam non nisi est sit. Purus ut faucibus pulvinar elementum integer enim neque volutpat.</p>
+              <p className="Content-text">Sed libero enim sed faucibus. Aenean pharetra magna ac placerat vestibulum. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Est placerat in egestas erat imperdiet sed euismod nisi porta. Et ligula ullamcorper malesuada proin libero nunc. Suspendisse ultrices gravida dictum fusce ut. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Turpis egestas pretium aenean pharetra magna ac. Quis varius quam quisque id diam vel. Id aliquet risus feugiat in ante metus dictum.</p>
+              <p className="Content-sub-subheader">Habitant Morbi Tristique</p>
+              <p className="Content-text">Faucibus vitae aliquet nec ullamcorper sit. Arcu dui vivamus arcu felis bibendum ut tristique. Velit ut tortor pretium viverra. Pellentesque id nibh tortor id aliquet lectus proin nibh. Nisl rhoncus mattis rhoncus urna neque viverra. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Mauris pharetra et ultrices neque. Cursus mattis molestie a iaculis at erat pellentesque. Scelerisque fermentum dui faucibus in ornare. Nunc non blandit massa enim nec dui nunc. Porta nibh venenatis cras sed felis. Velit dignissim sodales ut eu sem integer vitae justo eget. Sed odio morbi quis commodo odio aenean sed. Id volutpat lacus laoreet non. Mollis nunc sed id semper risus in hendrerit gravida.</p>
+            <p className="Content-subheader">Odio Facilisis</p>
+            <p className="Content-text">Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam. Luctus accumsan tortor posuere ac ut consequat semper. Congue eu consequat ac felis donec. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Nullam vehicula ipsum a arcu cursus. Congue mauris rhoncus aenean vel. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Lectus sit amet est placerat in egestas erat imperdiet sed. In fermentum posuere urna nec tincidunt praesent. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Viverra adipiscing at in tellus. Justo laoreet sit amet cursus. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Vestibulum mattis ullamcorper velit sed. Id semper risus in hendrerit gravida rutrum quisque non. Sit amet nisl suscipit adipiscing. Sed elementum tempus egestas sed sed risus pretium quam.</p>
           </main>
         </div>
       </div>
