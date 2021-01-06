@@ -27,7 +27,7 @@ class App extends React.Component {
 
   getActiveTitle = () => {
     const path = window.location.pathname;
-    if (path) {
+    if (path && path !== "/") {
       return path.replaceAll("/page/", "");
     }
     return Object.keys(pages)[0];
@@ -63,6 +63,7 @@ class App extends React.Component {
 
   render() {
     const { isGlobalNavOpen } = this.state;
+    console.log(this.state.activePage)
 
     return (
       <div className="App">
