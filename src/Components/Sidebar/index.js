@@ -1,10 +1,10 @@
-import { SidebarListItem } from './SidebarListItem'
-import './Sidebar.css'
+import { SidebarListItem } from "./SidebarListItem";
+import "./Sidebar.css";
 
 export const Sidebar = ({ openPage, deletePage, pagesList }) => (
   <nav className="Sidebar">
     <ul className="Sidebar--list">
-      {pagesList.map(pageTitle => (
+      {pagesList.map((pageTitle) => (
         <SidebarListItem
           title={pageTitle}
           openPage={openPage}
@@ -14,4 +14,4 @@ export const Sidebar = ({ openPage, deletePage, pagesList }) => (
       ))}
     </ul>
   </nav>
-)
+);

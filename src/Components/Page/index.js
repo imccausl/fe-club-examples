@@ -1,11 +1,17 @@
-import React from 'react'
-import { InfoIconTooltip } from '../Tooltip'
-import './Page.css'
+import React from "react";
+import { InfoIconTooltip } from "../Tooltip";
+import "./Page.css";
 
 export const Page = ({ content, level }) => (
   <React.Fragment>
     <div className="Page--heading-wrapper">
-      <p className={`Page--heading--${level}`}>{content.heading}</p>
+      <p
+        className={`Page--heading--${level}`}
+        role="heading"
+        aria-level={level + 1}
+      >
+        {content.heading}
+      </p>
       {content.tooltip && (
         <InfoIconTooltip
           info={<TooltipInfo {...content.tooltip} />}
@@ -15,13 +21,13 @@ export const Page = ({ content, level }) => (
     </div>
 
     {content.text &&
-      content.text.map(text => (
+      content.text.map((text) => (
         <p key={text.substring(0, 10)} className="Page--text">
           {text}
         </p>
       ))}
     {content.children &&
-      content.children.map(child => (
+      content.children.map((child) => (
         <Page
           key={child.heading.substring(0, 10)}
           content={child}
@@ -29,7 +35,7 @@ export const Page = ({ content, level }) => (
         />
       ))}
   </React.Fragment>
-)
+);
 
 const TooltipInfo = ({ author, published, ebookLink }) => (
   <React.Fragment>
@@ -41,4 +47,4 @@ const TooltipInfo = ({ author, published, ebookLink }) => (
     </p>
     <a href={ebookLink}>Project Gutenberg eBook</a>
   </React.Fragment>
-)
+);

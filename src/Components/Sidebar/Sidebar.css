@@ -31,14 +31,15 @@
   width: 100%;
   text-align: left;
   cursor: pointer;
-  outline: none;
 }
 
-.Sidebar--delete {
-  display: none;
+.Sidebar--delete button {
+  opacity: 0;
   cursor: pointer;
 }
 
-.Sidebar--item:hover .Sidebar--delete {
-  display: inline-block;
+.Sidebar--item:hover .Sidebar--delete button,
+.Sidebar--button:focus + .Sidebar--delete button,
+.Sidebar--delete button:focus {
+  opacity: 1;
 }

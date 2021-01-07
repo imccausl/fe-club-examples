@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import infoIcon from './info_icon.svg'
-import './Tooltip.css'
+import infoIcon from "./info_icon.svg";
+import "./Tooltip.css";
 
 export const InfoIconTooltip = ({ info, width = "150px" }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,14 +16,15 @@ export const InfoIconTooltip = ({ info, width = "150px" }) => {
 
   return (
     <div className="Tooltip--container">
-      <div
+      <button
         className="Tooltip--button"
-        role="button"
+        onFocus={toggleShowTooltip}
+        onBlur={toggleHideTooltip}
         onMouseOver={toggleShowTooltip}
         onMouseLeave={toggleHideTooltip}
       >
-        <img className="Tooltip--icon" src={infoIcon} />
-      </div>
+        <img className="Tooltip--icon" src={infoIcon} alt="more info" />
+      </button>
       {isVisible && (
         <div className="TooltipIcon--content" style={{ width }}>
           {info}
@@ -52,9 +53,14 @@ export const withTooltip = (WrappedButtonComponent) =>
     };
 
     render() {
-      const { tooltipContent, width = "150px", ...restProps } = this.props;
+      const {
+        tooltipContent,
+        width = "150px",
+        wrapperClassName,
+        ...restProps
+      } = this.props;
       return (
-        <div className="Tooltip--container">
+        <div className={`Tooltip--container ${wrapperClassName}`}>
           <WrappedButtonComponent
             {...restProps}
             onMouseOver={this.handleShowTooltip}

@@ -27,3 +27,15 @@
   width: calc(100vw - 440px);
   background: #ffffff;
 }
+
+.SkipLink {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  color: white;
+  z-index: 1;
+}
+
+.SkipLink:focus {
+  transform: translateY(0%);
+}

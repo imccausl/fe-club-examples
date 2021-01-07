@@ -28,11 +28,11 @@
 }
 
 .Tooltip--button {
-    display: block;
-    background: transparent;
-    border: none;
+  display: block;
+  background: transparent;
+  border: none;
 }
 
 .Tooltip--icon {
-    width: 20px;
+  width: 20px;
 }

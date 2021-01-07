@@ -32,13 +32,17 @@ class App extends React.Component {
     const pagesList = this.state.pagesList.filter(
       (title) => title !== pageTitle
     );
-    this.setState({ pagesList});
-    this.openPage(pagesList[0])
+    this.setState({ pagesList });
+    this.openPage(pagesList[0]);
+    document.getElementsByClassName("Sidebar--button")[0].focus();
   };
 
   render() {
     return (
       <div className="App">
+        <a href="#main" className="SkipLink">
+          Skip to main content
+        </a>
         <header className="Header" role="banner">
           <UniversalHeader />
           <CourseHeader />
@@ -49,7 +53,7 @@ class App extends React.Component {
             deletePage={this.deletePage}
             pagesList={this.state.pagesList}
           />
-          <main className="Page">
+          <main className="Page" id="main" tabIndex={-1}>
             {pages[this.state.activePage].map((content) => (
               <Page
                 content={content}

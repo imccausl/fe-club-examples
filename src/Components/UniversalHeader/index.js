@@ -1,16 +1,16 @@
-import React from 'react'
-import './UniversalHeader.css'
+import React from "react";
+import "./UniversalHeader.css";
 
 export class UniversalHeader extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { isGlobalNavOpen: false, isSupportNavOpen: false }
+    super(props);
+    this.state = { isGlobalNavOpen: false, isSupportNavOpen: false };
   }
   render() {
-    const { isGlobalNavOpen, isSupportNavOpen } = this.state
+    const { isGlobalNavOpen, isSupportNavOpen } = this.state;
     return (
       <div className="Universalheader">
-        <nav className="UniversalHeader--navlinks">
+        <nav className="UniversalHeader--navlinks" aria-label="app links">
           <a href="#courses" className="UniversalHeader--link">
             Courses
           </a>
@@ -19,7 +19,10 @@ export class UniversalHeader extends React.Component {
           </a>
         </nav>
         <div className="UniversalHeader--align-right">
-          <nav className="UniversalHeader--collapsablelist">
+          <nav
+            className="UniversalHeader--collapsablelist"
+            aria-label="Support"
+          >
             <button
               className="UniversalHeader--collapsablebutton"
               onClick={() =>
@@ -29,7 +32,7 @@ export class UniversalHeader extends React.Component {
               Support
             </button>
             {isSupportNavOpen && (
-              <ul className="UniversalHeader--navlist" role="menu">
+              <ul className="UniversalHeader--navlist">
                 <li className="UniversalHeader--listitem">
                   <a href="#chat" className="UniversalHeader--listlink">
                     Contact Us
@@ -43,18 +46,21 @@ export class UniversalHeader extends React.Component {
               </ul>
             )}
           </nav>
-          <nav className="UniversalHeader--collapsablelist">
+          <nav
+            className="UniversalHeader--collapsablelist"
+            aria-label="Jane Doe"
+          >
             <button
               className="UniversalHeader--collapsablebutton"
               onClick={() =>
                 this.setState({ isGlobalNavOpen: !isGlobalNavOpen })
               }
-              aria-expanded={isGlobalNavOpen ? 'true' : ''}
+              aria-expanded={isGlobalNavOpen}
             >
               Jane Doe
             </button>
             {isGlobalNavOpen && (
-              <ul className="UniversalHeader--navlist" role="menu">
+              <ul className="UniversalHeader--navlist">
                 <li className="UniversalHeader--listitem">
                   <a href="#settings" className="UniversalHeader--listlink">
                     Settings
@@ -70,6 +76,6 @@ export class UniversalHeader extends React.Component {
           </nav>
         </div>
       </div>
-    )
+    );
   }
 }
