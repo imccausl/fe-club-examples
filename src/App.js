@@ -32,7 +32,8 @@ class App extends React.Component {
     const pagesList = this.state.pagesList.filter(
       (title) => title !== pageTitle
     );
-    this.setState({ pagesList });
+    this.setState({ pagesList});
+    this.openPage(pagesList[0])
   };
 
   render() {
