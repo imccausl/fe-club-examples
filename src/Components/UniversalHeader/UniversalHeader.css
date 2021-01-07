@@ -25,6 +25,11 @@
   margin-left: 0;
 }
 
+.UniversalHeader--align-right {
+  display: flex;
+  flex-direction: row;
+}
+
 .UniversalHeader--collapsablelist {
   position: relative;
 }

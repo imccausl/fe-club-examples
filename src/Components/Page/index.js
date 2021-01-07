@@ -16,14 +16,14 @@ export const Page = ({ content, level }) => (
 
     {content.text &&
       content.text.map(text => (
-        <p key={text.substring(10)} className="Page--text">
+        <p key={text.substring(0, 10)} className="Page--text">
           {text}
         </p>
       ))}
     {content.children &&
       content.children.map(child => (
         <Page
-          key={child.heading.substring(10)}
+          key={child.heading.substring(0, 10)}
           content={child}
           level={level + 1}
         />

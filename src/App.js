@@ -38,7 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="Header">
+        <header className="Header" role="banner">
           <UniversalHeader />
           <CourseHeader />
         </header>
