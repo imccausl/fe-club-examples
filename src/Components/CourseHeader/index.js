@@ -28,7 +28,7 @@ export class CourseHeader extends React.Component {
 
     return (
       <div className="CourseHeader">
-        <p className="CourseHeader--title">A11y Reading Group</p>
+        <p id="course-name" className="CourseHeader--title">A11y Reading Group</p>
         <nav className="CourseHeader--tabs" aria-label="course links">
           {navTabs.map((tab) => (
             <NavTab tab={tab} activeHash={activeHash} key={tab.hash} />

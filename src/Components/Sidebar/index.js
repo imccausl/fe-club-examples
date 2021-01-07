@@ -2,7 +2,7 @@ import { SidebarListItem } from "./SidebarListItem";
 import "./Sidebar.css";
 
 export const Sidebar = ({ openPage, deletePage, pagesList }) => (
-  <nav className="Sidebar">
+  <nav className="Sidebar" aria-label="sidebar">
     <ul className="Sidebar--list">
       {pagesList.map((pageTitle) => (
         <SidebarListItem

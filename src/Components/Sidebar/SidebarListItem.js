@@ -9,6 +9,7 @@ export const SidebarListItem = ({ title, openPage, deletePage }) => (
       wrapperClassName="Sidebar--delete"
       onClick={() => deletePage(title)}
       tooltipContent="Delete item!"
+      aria-label={`delete item ${title.replaceAll("-", " ")}`}
     >
       -
     </ButtonWithTooltip>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import infoIcon from "./info_icon.svg";
 import "./Tooltip.css";
 
-export const InfoIconTooltip = ({ info, width = "150px" }) => {
+export const InfoIconTooltip = ({ info, width = "150px", additionalLabelText }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleShowTooltip = () => {
@@ -14,22 +14,25 @@ export const InfoIconTooltip = ({ info, width = "150px" }) => {
     setIsVisible(false);
   };
 
+  const ariaLabel = additionalLabelText ? `More info: ${additionalLabelText}` : 'More info'
+  const display = isVisible ? 'block' : 'none'
+
   return (
     <div className="Tooltip--container">
-      <button
+      <div
+        aria-describedby="tooltip-content"
         className="Tooltip--button"
         onFocus={toggleShowTooltip}
         onBlur={toggleHideTooltip}
         onMouseOver={toggleShowTooltip}
         onMouseLeave={toggleHideTooltip}
+        tabindex="0"
       >
-        <img className="Tooltip--icon" src={infoIcon} alt="more info" />
-      </button>
-      {isVisible && (
-        <div className="TooltipIcon--content" style={{ width }}>
+        <img className="Tooltip--icon" src={infoIcon} aria-label={ariaLabel} alt="" />
+      </div>
+        <div role="tooltip" id="tooltip-content" className="TooltipIcon--content" style={{ width, display }}>
           {info}
         </div>
-      )}
     </div>
   );
 };

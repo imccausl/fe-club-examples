@@ -24,6 +24,7 @@ export class UniversalHeader extends React.Component {
             aria-label="Support"
           >
             <button
+              aria-expanded={isSupportNavOpen}
               className="UniversalHeader--collapsablebutton"
               onClick={() =>
                 this.setState({ isSupportNavOpen: !isSupportNavOpen })
@@ -48,15 +49,19 @@ export class UniversalHeader extends React.Component {
           </nav>
           <nav
             className="UniversalHeader--collapsablelist"
-            aria-label="Jane Doe"
+            aria-labelledby="user-nav"
           >
             <button
+                id="user-nav"
               className="UniversalHeader--collapsablebutton"
               onClick={() =>
                 this.setState({ isGlobalNavOpen: !isGlobalNavOpen })
               }
               aria-expanded={isGlobalNavOpen}
             >
+                <div className="visually-hidden">
+                    user settings for
+                </div>
               Jane Doe
             </button>
             {isGlobalNavOpen && (

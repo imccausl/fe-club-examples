@@ -43,7 +43,7 @@ class App extends React.Component {
         <a href="#main" className="SkipLink">
           Skip to main content
         </a>
-        <header className="Header" role="banner">
+        <header className="Header" role="banner" aria-labelledby="course-name">
           <UniversalHeader />
           <CourseHeader />
         </header>

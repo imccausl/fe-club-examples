@@ -14,6 +14,7 @@ export const Page = ({ content, level }) => (
       </p>
       {content.tooltip && (
         <InfoIconTooltip
+          additionalLabelText={content.heading}
           info={<TooltipInfo {...content.tooltip} />}
           width="240px"
         />
