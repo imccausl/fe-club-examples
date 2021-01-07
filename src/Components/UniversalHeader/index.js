@@ -1,13 +1,13 @@
-import React from "react";
-import "./UniversalHeader.css";
+import React from 'react'
+import './UniversalHeader.css'
 
 export class UniversalHeader extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { isGlobalNavOpen: false };
+    super(props)
+    this.state = { isGlobalNavOpen: false }
   }
   render() {
-    const { isGlobalNavOpen } = this.state;
+    const { isGlobalNavOpen } = this.state
     return (
       <div className="Universalheader">
         <div className="UniversalHeader--navlinks">
@@ -26,7 +26,7 @@ export class UniversalHeader extends React.Component {
             Jennifer Cahalane
           </button>
           {isGlobalNavOpen && (
-            <ul className="UniversalHeader--navlist">
+            <ul className="UniversalHeader--navlist" role="menu">
               <li className="UniversalHeader--listitem">
                 <a href="/settings" className="UniversalHeader--listlink">
                   Settings
@@ -41,6 +41,6 @@ export class UniversalHeader extends React.Component {
           )}
         </div>
       </div>
-    );
+    )
   }
 }

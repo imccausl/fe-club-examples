@@ -1,6 +1,6 @@
-import React from "react";
-import { InfoIconTooltip } from "../Tooltip";
-import "./Page.css";
+import React from 'react'
+import { InfoIconTooltip } from '../Tooltip'
+import './Page.css'
 
 export const Page = ({ content, level }) => (
   <React.Fragment>
@@ -15,13 +15,13 @@ export const Page = ({ content, level }) => (
     </div>
 
     {content.text &&
-      content.text.map((text) => (
+      content.text.map(text => (
         <p key={text.substring(10)} className="Page--text">
           {text}
         </p>
       ))}
     {content.children &&
-      content.children.map((child) => (
+      content.children.map(child => (
         <Page
           key={child.heading.substring(10)}
           content={child}
@@ -29,7 +29,7 @@ export const Page = ({ content, level }) => (
         />
       ))}
   </React.Fragment>
-);
+)
 
 const TooltipInfo = ({ author, published, ebookLink }) => (
   <React.Fragment>
@@ -41,4 +41,4 @@ const TooltipInfo = ({ author, published, ebookLink }) => (
     </p>
     <a href={ebookLink}>Project Gutenberg eBook</a>
   </React.Fragment>
-);
+)
