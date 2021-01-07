@@ -25,3 +25,11 @@
 .Tooltip--container {
   position: relative;
 }
+
+.Tooltip--button {
+    display: block;
+}
+
+.Tooltip--icon {
+    width: 15%;
+}

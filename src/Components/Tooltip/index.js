@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import "./Tooltip.css";
+import infoIcon from './info_icon.svg'
+import './Tooltip.css'
 
 export const InfoIconTooltip = ({ info, width = "150px" }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,7 +22,7 @@ export const InfoIconTooltip = ({ info, width = "150px" }) => {
         onMouseOver={toggleShowTooltip}
         onMouseLeave={toggleHideTooltip}
       >
-        ℹ️
+        <img className="Tooltip--icon" src={infoIcon} />
       </div>
       {isVisible && (
         <div className="TooltipIcon--content" style={{ width }}>
