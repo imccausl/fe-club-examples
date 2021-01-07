@@ -1,4 +1,4 @@
-import { ButtonWithTooltip, InfoIconTooltip } from '../Tooltip'
+import { ButtonWithTooltip } from '../Tooltip'
 
 export const SidebarListItem = ({ title, openPage, deletePage }) => (
   <li className="Sidebar--item" key={title.substring(10)}>
