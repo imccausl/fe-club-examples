@@ -24,12 +24,15 @@
 
 .Tooltip--container {
   position: relative;
+  width: 20px;
 }
 
 .Tooltip--button {
     display: block;
+    background: transparent;
+    border: none;
 }
 
 .Tooltip--icon {
-    width: 15%;
+    width: 20px;
 }
