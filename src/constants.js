@@ -2,6 +2,11 @@ export const pages = {
   "the-wonderful-wizard-of-oz": [
     {
       heading: "The Wonderful Wizard of Oz",
+      tooltip: {
+        author: "L. Frank Baum",
+        published: "May 17, 1900",
+        ebookLink: "https://www.gutenberg.org/files/55/55-h/55-h.htm",
+      },
       children: [
         {
           heading: "The Cyclone",
@@ -36,6 +41,11 @@ export const pages = {
   "peter-pan": [
     {
       heading: "Peter Pan",
+      tooltip: {
+        author: "James M. Barrie",
+        published: "January 1, 1911",
+        ebookLink: "https://www.gutenberg.org/files/16/16-h/16-h.htm",
+      },
       children: [
         {
           heading: "Peter Breaks Through",
@@ -70,6 +80,11 @@ export const pages = {
   "alice-in-wonderland": [
     {
       heading: "Alice in Wonderland",
+      tooltip: {
+        author: "Lewis Carroll",
+        published: "November 26, 1865",
+        ebookLink: "https://www.gutenberg.org/files/928/928-h/928-h.htm",
+      },
       children: [
         {
           heading: "Down the Rabbit-Hole",
@@ -103,6 +118,11 @@ export const pages = {
   "around-the-world-in-80-days": [
     {
       heading: "Around the World in 80 Days",
+      tooltip: {
+        author: "Jules Verne",
+        published: "January 30, 1873",
+        ebookLink: "https://www.gutenberg.org/files/103/103-h/103-h.htm",
+      },
       children: [
         {
           heading:

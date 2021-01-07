@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import './Tooltip.css'
+import "./Tooltip.css";
 
-export const InfoIconTooltip = ({ info }) => {
-  const [isVisible, setIsVisible] = useState(false)
+export const InfoIconTooltip = ({ info, width = "150px" }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleShowTooltip = () => {
-    setIsVisible(true)
-  }
+    setIsVisible(true);
+  };
 
   const toggleHideTooltip = () => {
-    setIsVisible(false)
-  }
+    setIsVisible(false);
+  };
 
   return (
     <div className="Tooltip--container">
@@ -23,32 +23,35 @@ export const InfoIconTooltip = ({ info }) => {
       >
         ℹ️
       </div>
-      {isVisible && <div className="TooltipIcon--content">{info}</div>}
+      {isVisible && (
+        <div className="TooltipIcon--content" style={{ width }}>
+          {info}
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export const withTooltip = (WrappedButtonComponent) =>
   class extends React.Component {
     state = {
       isVisible: false,
-    }
+    };
 
     handleShowTooltip = () => {
       this.setState({
         isVisible: true,
-      })
-    }
+      });
+    };
 
     handleHideTooltip = () => {
       this.setState({
         isVisible: false,
-      })
-    }
+      });
+    };
 
     render() {
-      const { tooltipContent, ...restProps } = this.props
-      console.log(restProps.children)
+      const { tooltipContent, width = "150px", ...restProps } = this.props;
       return (
         <div className="Tooltip--container">
           <WrappedButtonComponent
@@ -57,13 +60,15 @@ export const withTooltip = (WrappedButtonComponent) =>
             onMouseLeave={this.handleHideTooltip}
           />
           {this.state.isVisible && (
-            <div className="Tooltip--content">{tooltipContent}</div>
+            <div className="Tooltip--content" style={{ width }}>
+              {tooltipContent}
+            </div>
           )}
         </div>
-      )
+      );
     }
-  }
+  };
 
-const Button = (props) => <button {...props} />
+const Button = (props) => <button {...props} />;
 
-export const ButtonWithTooltip = withTooltip(Button)
+export const ButtonWithTooltip = withTooltip(Button);

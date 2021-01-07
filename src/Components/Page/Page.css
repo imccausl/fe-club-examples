@@ -1,5 +1,11 @@
+.Page--heading-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .Page--heading--0 {
   font-size: 40px;
+  padding-right: 15px;
 }
 
 .Page--heading--1 {
@@ -13,4 +19,8 @@
 .Page--text {
   font-size: 14px;
   padding: 8px;
+}
+
+.TooltipInfo {
+  width: 100%;
 }
