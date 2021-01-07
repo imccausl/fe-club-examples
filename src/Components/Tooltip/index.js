@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 import infoIcon from './info_icon.svg'
 import './Tooltip.css'
 
-export const InfoIconTooltip = ({ info, width = "150px" }) => {
-  const [isVisible, setIsVisible] = useState(false);
+export const InfoIconTooltip = ({ info, width = '150px' }) => {
+  const [isVisible, setIsVisible] = useState(false)
 
   const toggleShowTooltip = () => {
-    setIsVisible(true);
-  };
+    setIsVisible(true)
+  }
 
   const toggleHideTooltip = () => {
-    setIsVisible(false);
-  };
+    setIsVisible(false)
+  }
 
   return (
     <div className="Tooltip--container">
@@ -30,31 +30,36 @@ export const InfoIconTooltip = ({ info, width = "150px" }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export const withTooltip = (WrappedButtonComponent) =>
+export const withTooltip = WrappedButtonComponent =>
   class extends React.Component {
     state = {
       isVisible: false,
-    };
+    }
 
     handleShowTooltip = () => {
       this.setState({
         isVisible: true,
-      });
-    };
+      })
+    }
 
     handleHideTooltip = () => {
       this.setState({
         isVisible: false,
-      });
-    };
+      })
+    }
 
     render() {
-      const { tooltipContent, width = "150px", ...restProps } = this.props;
+      const {
+        tooltipContent,
+        width = '150px',
+        wrapperClassName,
+        ...restProps
+      } = this.props
       return (
-        <div className="Tooltip--container">
+        <div className={`Tooltip--container ${wrapperClassName}`}>
           <WrappedButtonComponent
             {...restProps}
             onMouseOver={this.handleShowTooltip}
@@ -66,10 +71,10 @@ export const withTooltip = (WrappedButtonComponent) =>
             </div>
           )}
         </div>
-      );
+      )
     }
-  };
+  }
 
-const Button = (props) => <button {...props} />;
+const Button = props => <button {...props} />
 
-export const ButtonWithTooltip = withTooltip(Button);
+export const ButtonWithTooltip = withTooltip(Button)

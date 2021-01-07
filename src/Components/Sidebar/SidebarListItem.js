@@ -6,7 +6,7 @@ export const SidebarListItem = ({ title, openPage, deletePage }) => (
       {title.replaceAll('-', ' ')}
     </button>
     <ButtonWithTooltip
-      className="Sidebar--delete"
+      wrapperClassName="Sidebar--delete"
       onClick={() => deletePage(title)}
       tooltipContent="Delete item!"
     >

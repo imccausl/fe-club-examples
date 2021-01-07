@@ -34,11 +34,11 @@
   outline: none;
 }
 
-.Sidebar--delete {
+.Sidebar--delete button {
   display: none;
   cursor: pointer;
 }
 
-.Sidebar--item:hover .Sidebar--delete {
+.Sidebar--item:hover .Sidebar--delete button {
   display: inline-block;
 }
