@@ -1,19 +1,28 @@
+.TooltipIcon--content,
 .Tooltip--content {
-    position: absolute;
-    color: black;
-    background-color: white;
-    border: 1px solid lightgrey;
-    padding: 10px;
-    top: 0;
-    left: 25px;
-    width: 150px;
+  position: absolute;
+  color: black;
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  width: 150px;
+  z-index: 1000;
+}
 
+.TooltipIcon--content {
+  top: 0;
+  left: 25px;
+}
+
+.Tooltip--content {
+  top: 25px;
+  right: 0;
 }
 
 .Tooltip--content:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .Tooltip--container {
-    position: relative;
+  position: relative;
 }
