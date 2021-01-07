@@ -24,6 +24,7 @@
 
 .Tooltip--container {
   position: relative;
+  width: 20px;
 }
 
 .Tooltip--button {
@@ -31,5 +32,5 @@
 }
 
 .Tooltip--icon {
-    width: 15%;
+    width: 20px;
 }

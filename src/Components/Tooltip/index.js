@@ -22,7 +22,10 @@ export const InfoIconTooltip = ({ info, width = "150px" }) => {
         onMouseOver={toggleShowTooltip}
         onMouseLeave={toggleHideTooltip}
       >
+        <div>
+        <div className="visually-hidden">test visually hidden text:</div>
         <img className="Tooltip--icon" src={infoIcon} />
+        </div>
       </div>
       {isVisible && (
         <div className="TooltipIcon--content" style={{ width }}>
