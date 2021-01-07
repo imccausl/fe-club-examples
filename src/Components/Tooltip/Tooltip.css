@@ -29,6 +29,8 @@
 
 .Tooltip--button {
     display: block;
+    background: transparent;
+    border: none;
 }
 
 .Tooltip--icon {
