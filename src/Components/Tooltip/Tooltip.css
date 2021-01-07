@@ -1,0 +1,19 @@
+.Tooltip--content {
+    position: absolute;
+    color: black;
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    top: 0;
+    left: 25px;
+    width: 150px;
+
+}
+
+.Tooltip--content:hover {
+    cursor: pointer;
+}
+
+.Tooltip--container {
+    position: relative;
+}
